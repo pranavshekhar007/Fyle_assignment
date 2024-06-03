@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My home page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card-footer {
+            background-color: rgb(247, 163, 163);
+            margin-left: 0px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .card-footer :hover {
+            background-color: rgb(221, 209, 209);
+        }
+    </style>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        /* Customized Slick Dots */
+        .slick-dots {
+            position: absolute;
+            bottom: -30px;
+            right: 525px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slick-dots li {
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            cursor: pointer;
+            border: 2px solid pink;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .slick-dots li button:hover {
+            background-color: pink;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: pink;
+        }
+
+        .container-image-effect {
+            position: relative;
+        }
+
+        .image-slider {
+            display: block;
+            width: 280px;
+            height: 350px;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: pink;
+            color: white;
+            padding: 40px;
+            margin-left: 0px;
+            border-radius: 0px;
+        }
+
+        .container-image-effect:hover .image {
+            opacity: 0;
+        }
+
+        .container-image-effect:hover .middle {
+            opacity: 1;
+        }
+
+        .slider-section{
+            margin-top: 90px;
+            margin-bottom: 90px;
+        }
+    </style>
+
+    <style>
+        .clicking-section {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .clicking-section .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-clickable {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    height: 150px; /* Add this line */
+}
+
+        .card-clickable:hover {
+            background-color: rgb(244, 48, 81);
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            margin: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            
+            width: 700px;
+            height: 500px;
+            display: none;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img.active {
+            display: block;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .clicking-section{
+            margin-top: 90px;
+            margin-bottom: 90px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="about-main container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="about">
+                        <p class="para1">AWARD WINNING</p>
+
+                        <h1>DIGITAL MARKETING <br>AGENCY</h1>
+                        <P class="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi molestias
+                            perferendis amet in
+                            quam aliquam ipsam quibusdam distinctio, voluptas quaerat, eum facilis fuga vel inventore
+                            omnis
+                            asperiores
+                            blanditiis rerum vitae. Ab quidem reiciendis error.</P>
+                        <button id="contactBtn" type="button" class="btn btn-danger">Contact us</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="img-1.png" alt="image-1" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="contactModal" class="modal">
+
+        <div class="">
+            <span class="close">&times;</span>
+            <form method="post" action="https://getform.io/f/pbygzlmb" class="modal-content">
+                <h2>Talk to us</h2>
+                <input type="email" id="email" name="email" placeholder="Work email*" required><br><br>
+
+                <div class="name-container">
+                    <div class="floating-label-container">
+                        <input type="text" id="fname" name="fname" placeholder="First name*" required>
+                    </div>
+                    <div class="floating-label-container">
+                        <input type="text" id="lname" name="lname" placeholder="Last name*" required>
+                    </div>
+                </div><br>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms"> I agree to Fyle's terms and conditions, and provide <br> consent to send me
+                        communication.</label><br><br>
+                </div>
+                <button id="contactBtn" type="submit" class="btn btn-danger" value="submit">Contact us</button>
+            </form>
+        </div>
+    </div>
+    <section class="slider-section">
+    <div class="container">
+        <h2>Services provide for you</h2>
+        <div class="row">
+            <div class="col-md-12 heroSlider-fixed">
+                <!-- Slider -->
+                <div class="slider responsive">
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img1.png" alt="Image 1" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img2.png" alt="Image 2" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img3.png" alt="Image 3" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img4.png" alt="Image 4" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img1.png" alt="Image 5" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img2.png" alt="Image 6" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img3.png" alt="Image 7" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img4.png" alt="Image 8" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/"
+                                target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- control arrows -->
+                <div class="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+                <div class="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="clicking-section">
+        <div><h2><center>Why We Are Best?</center></h2></div>
+        <div class="container">
+            <div class="row">
+            <div class="cards">
+                <div class="card-clickable" onclick="showImage('image1')">
+                    <h2>Genderless Kei - Japan's Hot</h2>
+                    <p>Set to launch on the manutacturer's
+                        now A330nco aircraft in 2017, it's offering lots of</p>
+                </div>
+                <div class="card-clickable" onclick="showImage('image2')">
+                    <h2>Botter Stratogy & Quality</h2>
+                    <p>Set to launch an the manufacturer's now A330ngo aircraft in 2017, it's offering lots of</p>
+                </div>
+                <div class="card-clickable" onclick="showImage('image3')">
+                    <h2>Genderless Kei - Japan's Hot</h2>
+                    <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's
+                        oriering lots of</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img id="image1" src="Bsq.png" alt="Image 1" class="active">
+                <img id="image2" src="img2.png" alt="Image 2">
+                <img id="image3" src="img1.png" alt="Image 3">
+            </div>
+            </div>
+        </div>
+    
+        <script>
+            function showImage(imageId) {
+                // Hide all images
+                document.querySelectorAll('.image-container img').forEach(img => {
+                    img.classList.remove('active');
+                });
+                // Show the selected image
+                document.getElementById(imageId).classList.add('active');
+            }
+        </script>
+    </section>
+
+    <footer class="footer">
+        <div class="card-footer">
+            <p>199+</p>
+            <p>Clientes Satisfecti</p>
+        </div>
+        <div class="card-footer">
+            <p>1591+</p>
+            <p>Dies Operationis</p>
+        </div>
+        <div class="card-footer">
+            <p>283+</p>
+            <p>Projecta Completa</p>
+        </div>
+        <div class="card-footer">
+            <p>75+</p>
+            <p>Praemia Vincta</p>
+        </div>
+    </footer>
+
+    <section>
+
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.responsive').slick({
+                dots: true,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('image1').classList.add('active');
+        });
+    </script>
+</body>
+
+</html>

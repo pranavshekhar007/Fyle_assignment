@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Card Auto Slider</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        /* Customized Slick Dots */
+        .slick-dots {
+            position: absolute;
+            bottom: -30px;
+            right: 525px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slick-dots li {
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            cursor: pointer;
+            border: 2px solid pink;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .slick-dots li button:hover {
+            background-color: pink;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: pink;
+        }
+
+        .container-image-effect {
+            position: relative;
+        }
+
+        .image-slider {
+            display: block;
+            width: 100%;
+            height: 350px;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: pink;
+            color: white;
+            padding: 40px;
+            margin-left: 0px;
+            border-radius: 0px;
+        }
+
+        .container-image-effect:hover .image {
+            opacity: 0.3;
+        }
+
+        .container-image-effect:hover .middle {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Slider - Multiple Items & Responsive</h2>
+        <div class="row">
+            <div class="col-md-12 heroSlider-fixed">
+                <!-- Slider -->
+                <div class="slider responsive">
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img1.png" alt="Image 1" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img2.png" alt="Image 2" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img3.png" alt="Image 3" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img4.png" alt="Image 4" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img1.png" alt="Image 5" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img2.png" alt="Image 6" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img3.png" alt="Image 7" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                    <div class="container-image-effect">
+                        <img class="image-slider" src="img4.png" alt="Image 8" />
+                        <div class="middle">
+                            <h2>Web Development</h2>
+                            <p>Morbi sed lacus neo risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                            <a id="contactBtn" class="btn btn-danger" href="https://www.fylehq.com/" target="_blank">Read More --></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- control arrows -->
+                <div class="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+                <div class="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.responsive').slick({
+                dots: true,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>

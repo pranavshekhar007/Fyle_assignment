@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Image Display</title>
+    <style>
+        .clicking-section {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .clicking-section .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-clickable {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-clickable:hover {
+            background-color: rgb(244, 48, 81);
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            margin: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            
+            width: 700px;
+            height: 500px;
+            display: none;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img.active {
+            display: block;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+<section class="clicking-section">
+    <div class="container">
+        <div class="cards">
+            <div class="card-clickable" onclick="showImage('image1')">
+                <h2>Genderless Kei - Japan's Hot</h2>
+                <p>Set to launch on the manutacturer's
+                    now A330nco aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="card-clickable" onclick="showImage('image2')">
+                <h2>Botter Stratogy & Quality</h2>
+                <p>Set to launch an the manufacturer's now A330ngo aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="card-clickable" onclick="showImage('image3')">
+                <h2>Genderless Kei - Japan's Hot</h2>
+                <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's
+                    oriering lots of</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img id="image1" src="Bsq.png" alt="Image 1">
+            <img id="image2" src="img2.png" alt="Image 2">
+            <img id="image3" src="img1.png" alt="Image 3">
+        </div>
+    </div>
+
+    <script>
+        function showImage(imageId) {
+            // Hide all images
+            document.querySelectorAll('.image-container img').forEach(img => {
+                img.classList.remove('active');
+            });
+            // Show the selected image
+            document.getElementById(imageId).classList.add('active');
+        }
+    </script>
+</section>
+</body>
+
+</html>
